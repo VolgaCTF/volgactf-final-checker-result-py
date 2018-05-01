@@ -18,13 +18,17 @@ setup(
     description='Themis Finals checker result constants',
     author='Alexander Pyatkin',
     author_email='aspyatkin@gmail.com',
-    url='https://github.com/aspyatkin/themis-finals-checker-result-py',
+    url='https://github.com/themis-project/themis-finals-checker-result-py',
     license='MIT',
     packages=find_packages('.'),
     install_requires=[
-        'setuptools>=0.8',
-        'enum34>=1.1.6'
+        'setuptools>=35.0.0'
     ],
+    extras_require={
+        ':python_version<"3.4"': [
+            'enum34>=1.1.6'
+        ]
+    },
     namespace_packages=[
         'themis',
         'themis.finals',
